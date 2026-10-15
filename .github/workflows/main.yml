@@ -21,6 +21,7 @@ jobs:
       - name: Siapkan File Tambahan
         run: |
           touch app/proguard-rules.pro
+          echo "android.useAndroidX=true" > gradle.properties
           sed -i 's/📶//g' app/src/main/res/layout/activity_main.xml || true
 
       - name: Setup Gradle
